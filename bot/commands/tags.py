@@ -18,9 +18,10 @@ import json
 
 import aiosqlite
 import discord.ui
-from discord import Bot, slash_command, ApplicationContext, OptionChoice, Option, SlashCommandGroup, Interaction, AutocompleteContext
-from utils.database import connect
+from discord import Bot, slash_command, ApplicationContext, Option, SlashCommandGroup, Interaction, AutocompleteContext
+
 from utils import component_factory as cf
+from utils.database import connect
 
 tag_cache: dict[int, dict[str, str]] = {}
 aliases: dict[int, dict[str, str]] = {}

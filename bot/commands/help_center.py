@@ -14,15 +14,17 @@
 #  You should have received a copy of the GNU Affero General Public License
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-import discord.ui
-from discord import SlashCommandGroup, ApplicationContext, Option, AutocompleteContext, OptionChoice, Member, AllowedMentions, Bot
 from dataclasses import dataclass
 from datetime import datetime
-from utils.database import connect
+
 import aiosqlite
-from utils.component_factory import fail
+import discord.ui
+from discord import SlashCommandGroup, ApplicationContext, Option, AutocompleteContext, OptionChoice, Member, \
+    AllowedMentions, Bot
 from discord.ext import tasks
-from modules.discord_help_center import load_new_articles
+
+from utils.component_factory import fail
+from utils.database import connect
 
 group = SlashCommandGroup("help_center", description="Utilities For The Discord Help Center Articles")
 

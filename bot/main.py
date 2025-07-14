@@ -21,9 +21,10 @@ import discord as pycord
 import discord.ui
 from discord import ApplicationContext
 from dotenv import load_dotenv
-from utils.database import setup as database_setup
-from utils import component_factory as cf
+
 from modules.discord_help_center import load_new_articles
+from utils import component_factory as cf
+from utils.database import setup as database_setup
 
 load_dotenv()
 

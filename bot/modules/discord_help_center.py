@@ -14,13 +14,14 @@
 #  You should have received a copy of the GNU Affero General Public License
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+from datetime import datetime
+
 import aiohttp
 import aiosqlite
 import discord
 
 from commands.triggers import get_triggers_urls
 from utils.database import connect
-from datetime import datetime
 
 
 async def _paginate(url: str, page_size: int = 15, params: dict = None):

@@ -14,9 +14,10 @@
 #  You should have received a copy of the GNU Affero General Public License
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+from datetime import datetime, timedelta, timezone
+
 from discord import Bot, slash_command, ApplicationContext, Option, OptionChoice
 from discord.utils import snowflake_time, format_dt
-from datetime import datetime, timedelta, timezone
 
 
 @slash_command(description="Get The Timestamp From A Discord Snowflake")

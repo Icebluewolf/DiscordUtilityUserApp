@@ -14,11 +14,13 @@
 #  You should have received a copy of the GNU Affero General Public License
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+from io import BytesIO
+from zlib import compress, crc32
+
 from discord import SlashCommandGroup, Option, ApplicationContext, Bot, File, MediaGalleryItem, Member
 from discord.ui import Container, MediaGallery, View
+
 from utils import component_factory as cf
-from zlib import compress, crc32
-from io import BytesIO
 
 group = SlashCommandGroup("color", "Utilities For Color")
 
