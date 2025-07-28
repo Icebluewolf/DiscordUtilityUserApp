@@ -1,0 +1,15 @@
+FROM ubuntu:latest
+LABEL authors="Ice Wolfy"
+
+ENTRYPOINT ["top", "-b"]
+
+FROM python:3
+
+WORKDIR /DiscordUtilUserApp/bot
+
+COPY requirements.txt ./
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY . .
+
+CMD [ "python", "./bot/main.py" ]
