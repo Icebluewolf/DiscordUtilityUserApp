@@ -1,9 +1,5 @@
-FROM ubuntu:latest
-LABEL authors="Ice Wolfy"
-
-ENTRYPOINT ["top", "-b"]
-
 FROM python:3
+LABEL authors="Ice Wolfy"
 
 WORKDIR /DiscordUtilUserApp/bot
 
